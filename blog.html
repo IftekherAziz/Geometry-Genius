@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+
+    <!--------- DaisyUI CDN Link ---------->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <!----------Tailwind CDN Link---------->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <!--------- Header Section Start---------->
+    <header class="m-4 md:m-12">
+        <div class="navbar bg-sky-100 p-4 rounded flex justify-between">
+            <div class="flex flex-col">
+                <h1 class="normal-case text-4xl font-bold">Interactive</h1>
+                <h3 class="text-2xl">Geometry Genius</h3>
+            </div>
+            <div class="navbar-end">
+                <a class="btn btn-info px-6 py-0 text-white normal-case" href="index.html">Home</a>
+            </div>
+        </div>
+    </header>
+    <!--------- Header Section End---------->
+
+    <!--------- Main Section ---------->
+    <main class="m-4 md:m-12">
+        <section>
+            <div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mb-5">
+                <div class="collapse-title text-xl font-medium">
+                    What is DOM and what is the purpose of DOM?
+                </div>
+                <div class="collapse-content">
+                    <p>Document Object Model is simply called DOM.It represents the documents as nodes and objects which
+                        helps us to interact
+                        with the web page programatically.The purpose of Document Object Model is to allow programs and
+                        scripts running in a web browser to access and
+                        manipulate the structure and content of our markup documents.</p>
+                </div>
+            </div>
+            <div tabindex="1" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mb-5">
+                <div class="collapse-title text-xl font-medium">
+                    How will you select HTML elements using DOM? Name the DOM methods.
+                </div>
+                <div class="collapse-content">
+                    <p>There are six methods to select HTML elements using Document Object Model(DOM). We can select
+                        HTML element by their ID, Classname, Tagname, Name Attribute, Select All Element of specified
+                        selector and select first element of a specified selector.</p>
+                    <p>Here are the DOM methods to select HTML elements:</p>
+                    <ul>
+                        <li>- <b>getElementById()</b> - search element by element_id</li>
+                        <li>- <b>getElementsByTagName()</b> - search element by tag name (example: span, div)</li>
+                        <li>- <b>getElementsByClassName()</b> - search element by class name</li>
+                        <li>- <b>getElementsByName()</b> - search element by name attribute</li>
+                        <li>- <b>querySelector()</b> - returns the first element that matches the specified selector
+                        </li>
+                        <li>- <b>querySelectorAll()</b> returns elements that match the specified selector</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div tabindex="2" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mb-5">
+                <div class="collapse-title text-xl font-medium">
+                    What is event bubble?
+                </div>
+                <div class="collapse-content">
+                    <p>In Javascript Events changes the state of an object.The event bubble in javascript is a type of
+                        event propagation.It works when listeners are fired from the target of an event.</p>
+                    <p>Syntext of event bubbling: <b> addEventListener(type, listener, useCapture)</b></p>
+                    <ul>
+                        <li>- <b>type:</b> It used for the type of event. Example: (click)</li>
+                        <li>- <b>listener:</b> It is the function which we want to call when the event of the particular
+                            type occurs.</li>
+                        <li>- <b>userCapture:</b> It is a Boolean value. It indicates the event phase.</li>
+                    </ul>
+                </div>
+            </div>
+            <div tabindex="3" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mb-5">
+                <div class="collapse-title text-xl font-medium">
+                    What is a callback function and why will you use it?
+                </div>
+                <div class="collapse-content">
+                    <p>In JavaScript functions are first-class objects.So we can pass a function to another function as
+                        an argument.A callback
+                        function is also a function where we pass this function
+                        into another function as argument so that we can use it later.We use callback function to
+                        execute only after another
+                        function completes it's execution.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--------- Main Section End---------->
+</body>
+
+</html>

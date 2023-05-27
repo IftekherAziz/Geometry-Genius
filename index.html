@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+
+    <!--------- DaisyUI CDN Link ---------->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <!----------Tailwind CDN Link---------->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!---------- Font Awesome Link ---------->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--------- Header Section Start ---------->
+    <header class="m-6 md:m-12">
+        <div class="navbar bg-sky-100 p-4 rounded flex justify-between">
+            <div class="flex flex-col">
+                <h1 class="normal-case text-4xl font-bold">Interactive</h1>
+                <h3 class="text-2xl">Geometry Genius</h3>
+            </div>
+            <div class="navbar-end">
+                <a class="btn btn-info px-6 py-0 text-white normal-case" href="blog.html">Blog</a>
+            </div>
+        </div>
+    </header>
+    <!----------- Header Section End ----------->
+
+    <!--------- Main Section Start---------->
+    <main class="m-6 md:m-12">
+        <section class=" flex flex-col md:flex-row lg:flex-row gap-4">
+            <div class="products-cetails w-full md:w-[72%] lg:w-[72%] grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-------------- Triangle Card Start ------------>
+                <div onmouseenter="randomColor(this)" class="card w-full mx-auto bg-base-100 border block">
+                    <figure class="px-10 pt-10">
+                        <img src="images/triangle.png" alt="Triangle" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="triangle-title" class="card-title font-bold">Triangle</h2>
+                        <p class="text-sm py-2">Area (A) = 0.5 x b x h</p>
+                        <div class="flex justify-between px-3 w-[70%] md:w-[90%] lg:w-[90%] ">
+                            <div class="flex ">
+                                <input type="number" name="base" min="0" id="triangle-base"
+                                    class="outline-0 rounded w-2/12 bg-slate-200 pl-3 flex-grow" placeholder="b">
+                                <p>cm</p>
+                            </div>
+                            <div class="flex ">
+                                <input type="number" name="base" min="0" id="triangle-height"
+                                    class="outline-0 rounded w-2/12 bg-slate-200 pl-3 flex-grow" placeholder="h">
+                                <p>cm</p>
+                            </div>                          
+                        </div>
+                        <div class="card-actions pt-3 w-[70%] md:w-[90%] lg:w-[90%]">
+                            <button id="btn-triangle"
+                                class="btn btn-wide btn-block btn-info text-white normal-case">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-------------- Triangle Card End ------------>
+
+                <!-------------- Rectangle Card Start -------------->
+                <div onmouseenter="randomColor(this)" class="card w-full mx-auto bg-base-100 border block">
+                    <figure class="px-10 pt-10">
+                        <img src="images/rectangle.png" alt="Rectangle" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="rectangle-title" class="card-title font-bold">Rectangle</h2>
+                        <p class="text-sm py-2">Area (A) = w x I</p>
+                        
+                        <div class="flex justify-between px-5 w-[70%] md:w-[90%] lg:w-[90%] ">
+                            <div class="flex">
+                                <input type="number" name="base" min="0" id="rectangle-width"
+                                    class="outline-0 rounded w-2/12 bg-slate-200 pl-3 flex-grow" placeholder="w">
+                                <p>cm</p>
+                            </div>
+                            <div class="flex">
+                                <input type="number" name="base" min="0" id="rectangle-length"
+                                    class="outline-0 rounded w-2/12 bg-slate-200 pl-3 flex-grow" placeholder="I">
+                                <p>cm</p>
+                            </div>
+                        </div>
+                        <div class="card-actions pt-3 w-[70%] md:w-[90%] lg:w-[90%">
+                            <button id="btn-rectangle"
+                                class="btn btn-wide btn-block btn-info text-white normal-case">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-------------- Rectangle Card End -------------->
+
+                <!------------- Parallelogram Card Start -------------->
+                <div onmouseenter="randomColor(this)" class="card w-full mx-auto bg-base-100 border block">
+                    <figure class="px-10 pt-10">
+                        <img src="images/parallelogram-rb.png" alt="Parallelogram" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="parallelogram-title" class="card-title font-bold">Parallelogram</h2>
+                        <p class="text-sm py-2">Area (A) = b x h</p>
+                       
+                        <div class="flex justify-between px-5 w-[70%] md:w-[90%] lg:w-[90%] ">
+                            <div class="flex ">
+                                <input type="number" name="base" min="0" id="parallelogram-base"
+                                    class="outline-0 rounded w-2/12 bg-slate-200 pl-3 flex-grow" placeholder="b">
+                                <p>cm</p>
+                            </div>
+                            <div class="flex ">
+                                <input type="number" name="base" min="0" id="parallelogram-height"
+                                    class="outline-0 rounded w-2/12 bg-slate-200 pl-3 flex-grow" placeholder="h">
+                                <p>cm</p>
+                            </div>                           
+                        </div>
+                        <div class="card-actions pt-3 w-[70%] md:w-[90%] lg:w-[90%">
+                            <button id="btn-parallelogram"
+                                class="btn btn-wide btn-block btn-info text-white normal-case">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!------------- Parallelogram Card End -------------->
+
+                <!------------- Rhombus Card Start --------------->
+                <div onmouseenter="randomColor(this)" class="card w-full mx-auto bg-base-100 border block">
+                    <figure class="px-10 pt-10">
+                        <img src="images/rhombus-rb.png" alt="Rhombus" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="rhombus-title" class="card-title font-bold">Rhombus</h2>
+                        <p class="text-sm">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                        <div class="py-2 ">
+                            <span id="">d<sub>1</sub> = 16cm </span>,
+                            <span id="">d<sub>2</sub> = 8cm </span>                           
+                        </div>                 
+                        <div class="card-actions pt-3 w-[70%] md:w-[90%] lg:w-[90%">
+                            <button id="btn-rhombus"
+                                class="btn btn-wide btn-block btn-info text-white normal-case">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!---------------- Rhombus Card End ----------------->
+
+                <!---------------- Pentagon Card Start --------------->
+                <div onmouseenter="randomColor(this)" class="card w-full mx-auto bg-base-100 border block">
+                    <figure class="px-10 pt-10">
+                        <img src="images/pentagon-rb.png" alt="Pentagon" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="pentagon-title" class="card-title font-bold">Pentagon</h2>
+                        <p class="text-sm">Area (A) = 0.5 x p x b</p>
+                        <div class="py-2 ">
+                            <span>p = 6cm </span>,
+                            <span>b = 10cm </span>                        
+                        </div>           
+                        <div class="card-actions pt-3 w-[70%] md:w-[90%] lg:w-[90%">
+                            <button id="btn-pentagon"
+                                class="btn btn-wide btn-block btn-info text-white normal-case">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!---------------- Pentagon Card End --------------->
+
+                <!--------------- Ellipse Card Start ---------------->
+                <div onmouseenter="randomColor(this)" class="card w-full mx-auto bg-base-100 border block">
+                    <figure class="px-10 pt-10">
+                        <img src="images/ellipse-rb.png" alt="Ellipse" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="ellipse-title" class="card-title font-bold">Ellipse</h2>
+                        <p class="text-sm">Area (A) = πab</p>
+                        <div class="py-2 ">
+                            <span id="">a = 10cm </span>,
+                            <span id="">b = 4cm </span>                    
+                        </div>                      
+                        <div class="card-actions pt-3 w-[70%] md:w-[90%] lg:w-[90%">
+                            <button id="btn-ellipse"
+                                class="btn btn-wide btn-block btn-info text-white normal-case">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!--------------- Ellipse Card End ---------------->
+            </div>
+            <!------------ Area Calculation  Start ---------------->
+            <div class="card w-full md:w-[28%] lg:w-[28%] border overflow-y-auto">
+                <h3 class="text-md text-center font-bold underline py-5">
+                    Area Calculation:
+                </h3>
+                <div class="overflow-x-auto mx-4">
+                    <table class="table w-full">                     
+                        <tbody id="table-container">
+                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!------------ Area Calculation  End ---------------->
+        </section>
+    </main>
+    <!----------- Main Section End ------------>
+
+
+    <!----------- Script Section Start --------->
+    <script src="script/function.js"></script>
+    <script src="script/event.js"></script>
+    <!----------- Script Section Start --------->
+</body>
+
+</html>
